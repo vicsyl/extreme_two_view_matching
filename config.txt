@@ -1,0 +1,66 @@
+# some parameters defined/parsed in config.py, some in pipeline.py
+
+output_dir = work/example_run
+
+parameters to play with:
+
+rectify = True
+
+# possible values: mean, full, None
+mean_shift_type = mean
+filter_sky = True
+singular_value_quantil = 1.0
+handle_antipodal_points = False
+angle_distance_threshold_degrees = 35
+
+# possible values: SIFT, BRISK, SUPERPOINT, ROOT_SIFT, HARD_NET
+feature_descriptor = SIFT
+
+# AFFNET
+
+# to turn on this feature_descriptor has to be HARD_NET
+rectify_affine_affnet = False
+
+# this is to use only every i-th HardNet feature
+# helps to speed up the computation, especially when it's running on CPU
+# default value: None
+affnet_hard_net_filter = 5
+
+# possible values: sparse_cover, dense_cover
+#affnet_covering_type = sparse_cover
+#affnet_covering_fraction_th = 0.95
+#affnet_covering_max_iter = 100
+
+# no_clustering means don't use depth maps
+affnet_no_clustering = False
+
+matching_pairs = frame_0000001535_4_frame_0000000305_1
+
+# caching, show and save
+
+use_cached_img_data = False
+
+show_affnet = True
+show_input_img = True
+show_matching = True
+show_clusters = True
+show_clustered_components = True
+show_rectification = True
+show_sky_mask = True
+affnet_warp_image_show_transformation = False
+
+save_clusters = False
+save_matching = False
+save_clustered_components = False
+save_rectification = False
+save_sky_mask = False
+
+
+# DATASET
+
+scene_type = orig
+scene_name = scene1
+file_name_suffix = .jpg
+matching_difficulties_min = 0
+matching_difficulties_max = 1
+matching_limit = 1

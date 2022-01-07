@@ -1,4 +1,7 @@
-# extreme_two_view_matching
-Diploma thesis - perspective and affine rectification of local features
+# Extreme two-view matching of image containing planar surfaces
 
-The repo will be ready soon
+## Diploma thesis by Václav Vávra 
+
+Repo with code base for the thesis
+
+Running self contained example: just run 'pipeline.py'   
